@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio wWebsite-- Sakshee Singh</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c32f024528.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -12,20 +13,21 @@
         <nav>
             <img  src= "MyImage/Picsart_24-03-03_00-29-31-797.jpg" class="logo" />
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skill</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Project">Project</a></li>
+                <li><a href="#Contact">Contact</a></a></li>
             </ul>
         </nav>
     <div class="header-text">
-        <p> Software Developer</p>
+        <p> Software Development Engineer</p>
         <h1> Hi, I'm <span>SAKSHEE</span></h1>
-
+        <div class="social-icons"></div>
+        <a href="https://www.linkedin.com/in/sakshee-singh-700655213"><i class="fa-brands fa-linkedin"></i></a> 
        </div>
     </div>
-   <!------------about----------> 
+    </div>
+   <!------------about-----------> 
     <div id="About">
     <div class="container">
         <div class="row">
@@ -34,12 +36,97 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>Hi, I am a software developer who l</p>
+                <p>Hi, I am an enthusiastic learner and developer. I have a good experience in fronted development and java development. I have also worked on AI-ML based projet. </p>
+                <div class="tab-titles">
+            <h6 class="tab-links active-link" onclick="opentab('Skills')">Skills</h6>
+
+           </div>
+           <div class="tab-contents active-tab" id="Skills">
+            <ul>
+                <li><span>Programming Languages</span><br>Java, Python, HTML5, CSS, JavaScript, SQL</li>
+                <li><span>Tools</span><br>AWS, PyCharm, Linux, VScode, GitHub</li>
+            </ul>
+           </div>
             </div>
         </div>
     </div>
-
     </div>
+    <!---------------------Projects-------------------->
+    <div id="Projects">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+            <img src="MyImage/football-1396740_640.jpg">
+            <div class="layer">
+                <h3>KICK IT</h3>
+                <p>It is website for team management and fair player biding, and  it helps to make an awesome team in a small budget.</p>
+                <a href="https://github.com/Sakshee30/Kick_It.github.io"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="MyImage/movie-1673021_640.jpg">
+            <div class="layer">
+                <h3>Movie Recommendation System</h3>
+                <p>It is based on AI-ML for filtering or forcasting user preferences for movies based on their browsing history and other bhaviour. Processed data entered by user at the application's back end to provide a suggested search.</p>
+                <a href="https://github.com/Sakshee30/MovieRecommendationSystem.github.io"><i class="fa-solid fa-arrow-up-right-from-square
+                    "></i></a>
+            </div>
+        </div>
+      </div>
+        <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+<!------------contact------------>
+<div id="Contact">
+<div class="container">
+   <div class="row">
+    <div class="contact-left">
+<h1 class="sub-title">Contact Me</h1>
+<p><i class="fa-sharp fa-solid fa-paper-plane"></i>saksheesingh742@gmail.com</p>
+<p><i class="fa-sharp fa-solid fa-square-phone"></i>+91 7761073875</p>
+<div class="social-icons"></div>
+<a href="https://www.linkedin.com/in/sakshee-singh-700655213"><i class="fa-brands fa-linkedin"></i></a>
+<div>
+    <a href="MyImage/SAKSHEE_RESUME (2).pdf" download class="btn btn2">Download CV</a>
+</div>     
+<div class="Contact-right">
+    <form>
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="message" row="6" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn2">Submit</button>
+    </form>
+</div>
+
+</div>
+</div>
+
+<div class="copyright">
+    <p>Copyright@Sakshee</p>
+</div>
+</div>
+
+
+
+
+
+
+
+       <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+   function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+    }
+   for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
 </body>
 </body>
 </html>
